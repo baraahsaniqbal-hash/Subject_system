@@ -1,0 +1,34 @@
+ <% @page_title ="Sections" %>
+
+<div class = "sections index">
+    <h2> Sections </h2>
+
+    <%= link_to(image_tag('plus_sign.png', :size => '11x11', :alt => '+') + " Add New Section", new_section_path, :class => 'action new' )%>
+
+    <div><%=pluralize(@sections.size,'section')%> found</div>
+    <table class="listing" summary="Section list">
+        <tr class="header">
+            <th>&nbsp;</th>
+            <th>Page</th>
+            <th>Section</th>
+            <th>ContentType</th>
+            <th>Visible</th>
+            <th>Actions</th>
+        </tr>
+        <% @sections.each do |section| %>
+        <tr>
+            <td><%= section.position%></td>
+            <td><%= section.page.name%></td>
+            <td><%= section.name%></td>
+            <td><%= section.content_type %></td>
+            <td class = "center" ><%= status_tag(section.visible) %></td>
+            <td class = "actions">
+                <%= link_to("Show", section_path(section.id), :class => 'action show') %>
+                <%= link_to("Edit", edit_section_path(section.id), :class => 'action edit') %>
+                <%= button_to "Delete", section_path(section.id), method: :delete, 
+                    class: 'action delete' %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

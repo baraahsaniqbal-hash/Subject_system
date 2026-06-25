@@ -1,0 +1,19 @@
+<%= 1 + 2 %>
+<br/>
+
+<% target = "world" %>
+<%= "Hello, #{target}!" %>
+<br/>
+
+<% @array.each do |item| %>
+    <%= "hi #{item}" %>
+    <br/>
+<% end %>
+
+<a href="/demo/index">Index Page 1</a><br/>
+<%= link_to "Index Page 2", {:controller => 'demo', :action=> 'index'} %><br/>
+<br/>
+
+ID:<%= @id %><br/>
+Page:<%= @page %><br/>
+<%= params.inspect %><br/>

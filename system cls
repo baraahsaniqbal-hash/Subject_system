@@ -1,0 +1,60 @@
+= AAccttiivveeRReeccoorrdd::::RReellaattiioonn  <<  OObbjjeecctt
+
+------------------------------------------------------------------------
+= IInncclluuddeess::
+Enumerable (from gem activerecord-6.1.7.10)
+
+(from gem activerecord-6.1.7.10)
+------------------------------------------------------------------------
+= AAccttiivvee  RReeccoorrdd  RReellaattiioonn
+
+
+
+
+
+------------------------------------------------------------------------
+= CCoonnssttaannttss::
+
+CLAUSE_METHODS:
+  [not documented]
+
+INVALID_METHODS_FOR_DELETE_ALL:
+  [not documented]
+
+MULTI_VALUE_METHODS:
+  [not documented]
+
+SINGLE_VALUE_METHODS:
+  [not documented]
+
+VALUE_METHODS:
+  [not documented]
+
+
+= CCllaassss  mmeetthhooddss::
+
+  new
+
+= IInnssttaannccee  mmeetthhooddss::
+
+  ==, _create, _create!, _increment_attribute, _new, _scoping,
+  _substitute_values, already_in_scope?, any?, blank?, build,
+  build_preloader, cache_key, cache_key_with_version, cache_version,
+  create, create!, create_or_find_by, create_or_find_by!,
+  current_scope_restoring_block, delete_all, delete_by, destroy_all,
+  destroy_by, eager_loading?, empty?, encode_with, exec_queries,
+  explain, find_or_create_by, find_or_create_by!, find_or_initialize_by,
+  initialize_copy, inspect, joined_includes_values, klass, load,
+  load_records, loaded, loaded?, many?, model, new, none?, one?,
+  predicate_builder, pretty_print, references_eager_loaded_tables?,
+  reload, reset, scope_for_create, scoping, size, skip_preloading_value,
+  skip_query_cache_if_necessary, table, tables_in_string, to_a, to_ary,
+  to_sql, touch_all, update_all, update_counters, values,
+  where_values_hash
+
+= AAttttrriibbuutteess::
+
+  attr_accessor skip_preloading_value, attr_reader klass, attr_reader
+  loaded, attr_reader loaded?, attr_reader model, attr_reader
+  predicate_builder, attr_reader table
+
