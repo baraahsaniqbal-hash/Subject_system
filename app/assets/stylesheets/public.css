@@ -61,7 +61,7 @@ a:hover {}
     clear: both; 
     height: 2.5em; 
     text-align: right;
-    background: #4C2516; 
+    background: #21140E url(/assets/footer_gradient.png) repeat-y 0 0; 
     color: #F2DC87; }
 #footer p { 
     margin: 0; 

@@ -2,6 +2,9 @@ class AdminUser < ApplicationRecord
 
   # TO CONFIGURE  a different table name
   # self.table_name = "admin_users"
+  
+  has_secure_password
+
   has_and_belongs_to_many :pages, dependent: :destroy
   has_many :section_edits, dependent: :destroy
   has_many :section, :through => :section_edits, dependent: :destroy
@@ -11,7 +14,7 @@ class AdminUser < ApplicationRecord
   #validates :email_confirmation, presence: true, if: :email_changed?
 
 
-EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
+  EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   validates_presence_of :first_name
   validates_length_of :first_name, :maximum => 25
   validates_presence_of :last_name
@@ -37,4 +40,10 @@ EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   #                       :format => { :with => EMAIL_REGEX },
   #                       :confirmation => true
 
+  scope :sorted, lambda { order("last_name ASC, first_name ASC") }
+
+  def name
+    "#{first_name} #{last_name}"
+  end
+  
 end
